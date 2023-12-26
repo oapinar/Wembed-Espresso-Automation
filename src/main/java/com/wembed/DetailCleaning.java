@@ -13,6 +13,22 @@ public class DetailCleaning {
         this.degreaserStock = initialDegreaserStock;
     }
 
+    public int getWaterTankCapacity() {
+        return waterTankCapacity;
+    }
+
+    public void setWaterTankCapacity(int waterTankCapacity) {
+        this.waterTankCapacity = waterTankCapacity;
+    }
+
+    public double getDegreaserStock() {
+        return degreaserStock;
+    }
+
+    public void setDegreaserStock(double degreaserStock) {
+        this.degreaserStock = degreaserStock;
+    }
+
     public void performDetailCleaning() {
         System.out.println("\nDetail cleaning started.");
 

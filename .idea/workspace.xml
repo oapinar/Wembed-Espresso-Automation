@@ -4,17 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab6ef291-4384-4362-838a-d7b1ed383e84" name="Changes" comment="">
+    <list default="true" id="ab6ef291-4384-4362-838a-d7b1ed383e84" name="Changes" comment="Updated Access Modifiers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wembed/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wembed/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wembed/Coffee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wembed/Coffee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wembed/DetailCleaning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wembed/DetailCleaning.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,9 +45,22 @@
       <recent name="C:\oapdisk\cmpeMaterials\s3\Principles of Software Design and Development\WembedEspressoAutomation\src\main\java\com\wembed" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.wembed.App" />
+      <module name="WembedEspressoAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wembed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DetailCleaningTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wembed.DetailCleaningTest" />
       <module name="WembedEspressoAutomation" />
       <extension name="coverage">
         <pattern>
@@ -57,6 +75,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.DetailCleaningTest" />
       </list>
     </recent_temporary>
   </component>
@@ -69,6 +88,18 @@
       <option name="presentableId" value="Default" />
       <updated>1703595015274</updated>
     </task>
+    <task id="LOCAL-00001" summary="Updated Access Modifiers">
+      <created>1703608760590</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703608760590</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated Access Modifiers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Access Modifiers" />
   </component>
 </project>

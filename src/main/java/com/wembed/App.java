@@ -57,7 +57,8 @@ public class App {
             System.out.println("2. Update Stocks");
             System.out.println("3. Add Coffee");
             System.out.println("4. Detail Cleaning");
-            System.out.println("5. Return to Main Menu");
+            System.out.println("5. Test Detail Cleaning");
+            System.out.println("6. Return to Main Menu");
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
@@ -75,12 +76,35 @@ public class App {
                     detailCleaning.performDetailCleaning();
                     break;
                 case 5:
+                    testDetailCleaning();
+                    break;
+                case 6:
                     back = true;
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
         }
+    }
+
+    private void testDetailCleaning() {
+        // Assuming initial values for the test
+        int initialWaterCapacity = 2000;
+        double initialDegreaserStock = 10;
+
+        // Create a new instance of DetailCleaning for testing
+        DetailCleaning detailCleaningTest = new DetailCleaning(initialWaterCapacity, initialDegreaserStock);
+
+        // Perform the cleaning
+        detailCleaningTest.performDetailCleaning();
+
+        // Verify and output results
+        boolean waterCapacityTest = detailCleaningTest.getWaterTankCapacity() < initialWaterCapacity;
+        boolean degreaserStockTest = detailCleaningTest.getDegreaserStock() < initialDegreaserStock;
+
+        System.out.println("\nDetailCleaning Test Results:");
+        System.out.println("Water Tank Capacity Test: " + (waterCapacityTest ? "PASS" : "FAIL"));
+        System.out.println("Degreaser Stock Test: " + (degreaserStockTest ? "PASS" : "FAIL"));
     }
 
     private void generateRandomWarning() {
