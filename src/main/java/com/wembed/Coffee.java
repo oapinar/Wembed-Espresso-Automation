@@ -105,7 +105,7 @@ public class Coffee {
         this.steamMilk = steamMilk;
     }
 
-    private double getAmount(String ingredientName) {
+    public double getAmount(String ingredientName) {
         switch (ingredientName.toLowerCase()) {
             case "espresso":
                 return espresso;

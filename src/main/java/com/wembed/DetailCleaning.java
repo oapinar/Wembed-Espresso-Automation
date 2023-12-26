@@ -44,25 +44,25 @@ public class DetailCleaning {
         System.out.println("Detail cleaning completed.");
     }
 
-    private boolean ensureWaterInTank(int amount) {
+    public boolean ensureWaterInTank(int amount) {
         return waterTankCapacity >= amount;
     }
 
-    private void getAndBoilWater(int amount) {
+    public void getAndBoilWater(int amount) {
         System.out.println("Getting and boiling " + amount + "ml of water.");
         waterTankCapacity += amount;
     }
 
-    private void pumpWaterThroughMachine(int amount) {
+    public void pumpWaterThroughMachine(int amount) {
         System.out.println("Pumping " + amount + "ml of hot water through the machine.");
         waterTankCapacity -= amount;
     }
 
-    private boolean ensureDegreaserInMachine(double amount) {
+    public boolean ensureDegreaserInMachine(double amount) {
         return degreaserStock >= amount;
     }
 
-    private boolean waitForDegreaserInsertion() {
+    public boolean waitForDegreaserInsertion() {
         System.out.println("Waiting for degreaser insertion...");
         long waitTime = 1 * 3 * 1000;
         long startTime = System.currentTimeMillis();
@@ -74,12 +74,12 @@ public class DetailCleaning {
         return false;
     }
 
-    private void pumpWaterWithDegreaserThroughMilkPipe(int waterAmount, double degreaserAmount) {
+    public void pumpWaterWithDegreaserThroughMilkPipe(int waterAmount, double degreaserAmount) {
         System.out.println("Pumping " + waterAmount + "ml of hot water with " + degreaserAmount + "cl degreaser through the milk pipe.");
         degreaserStock -= degreaserAmount;
     }
 
-    private void spraySteamToDripTray() {
+    public void spraySteamToDripTray() {
         System.out.println("Spraying steam to the drip tray.");
     }
 }

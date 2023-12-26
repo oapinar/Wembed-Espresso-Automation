@@ -3,14 +3,14 @@ package com.wembed;
 import java.util.Random;
 import java.util.Scanner;
 
-public class FinalApp {
+public class App {
     private Menu menu;
     private IngredientStock ingredientStock;
     private Scanner scanner;
     private Random random = new Random();
     private DetailCleaning detailCleaning;
 
-    public FinalApp() {
+    public App() {
         detailCleaning = new DetailCleaning(2000, 10);
         ingredientStock = new IngredientStock();
         menu = new Menu("JavaBeans Café", ingredientStock);
@@ -129,7 +129,7 @@ public class FinalApp {
     }
 
     private void addCoffeeToMenu() {
-
+        scanner.nextLine();
         System.out.print("Enter coffee name (or type 'cancel' to return): ");
         String name = scanner.nextLine();
         if (name.equalsIgnoreCase("cancel")) {
@@ -290,7 +290,7 @@ public class FinalApp {
     }
 
     public static void main(String[] args) {
-        FinalApp app = new FinalApp();
+        App app = new App();
         app.start();
     }
 }
