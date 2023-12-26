@@ -57,7 +57,7 @@ public class App {
             System.out.println("2. Update Stocks");
             System.out.println("3. Add Coffee");
             System.out.println("4. Detail Cleaning");
-            System.out.println("5. Test Detail Cleaning");
+            System.out.println("5. Test Menu Functionality");
             System.out.println("6. Return to Main Menu");
             System.out.print("Choose an option: ");
 
@@ -76,7 +76,7 @@ public class App {
                     detailCleaning.performDetailCleaning();
                     break;
                 case 5:
-                    testDetailCleaning();
+                    testMenuFunctionality();
                     break;
                 case 6:
                     back = true;
@@ -87,24 +87,21 @@ public class App {
         }
     }
 
-    private void testDetailCleaning() {
-        // Assuming initial values for the test
-        int initialWaterCapacity = 2000;
-        double initialDegreaserStock = 10;
+    private void testMenuFunctionality() {
+        System.out.println("\n");
+        Menu testMenu = new Menu("Test JavaBeans Café", new IngredientStock());
 
-        // Create a new instance of DetailCleaning for testing
-        DetailCleaning detailCleaningTest = new DetailCleaning(initialWaterCapacity, initialDegreaserStock);
+        System.out.println("Test 1: Display Menu");
+        testMenu.displayMenu();
 
-        // Perform the cleaning
-        detailCleaningTest.performDetailCleaning();
+        System.out.println("\nTest 2: Get Coffee at Index 2");
+        Coffee coffeeAtIndex2 = testMenu.getCoffeeAtIndex(1);
+        System.out.println((coffeeAtIndex2 != null && "Hazelnut Latte".equals(coffeeAtIndex2.getName()) ? "Coffee at index 2: " + coffeeAtIndex2.getName() +"\nResult: PASS" : "FAIL"));
 
-        // Verify and output results
-        boolean waterCapacityTest = detailCleaningTest.getWaterTankCapacity() < initialWaterCapacity;
-        boolean degreaserStockTest = detailCleaningTest.getDegreaserStock() < initialDegreaserStock;
-
-        System.out.println("\nDetailCleaning Test Results:");
-        System.out.println("Water Tank Capacity Test: " + (waterCapacityTest ? "PASS" : "FAIL"));
-        System.out.println("Degreaser Stock Test: " + (degreaserStockTest ? "PASS" : "FAIL"));
+        System.out.println("\nTest 3: Add Coffee 'Cappuccino' to Menu");
+        testMenu.addCoffee(new Coffee("Cappuccino", 10, 100, 200, 0, "", 0, 75, 75, false));
+        testMenu.displayMenu();
+        System.out.println("\n");
     }
 
     private void generateRandomWarning() {
